@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ejs-strips.css">
+    <title>Menu Strips</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="menu1">Menu</h1>
+        <div class="strip-container">
+            <% menu.forEach((fooditem)=>{  %>
+                <div class="strips">
+                     <div class="strip-title-box">
+                        <h2 class="strip-title"><%=fooditem.FoodName %></h2>
+                     </div>
+                     <div class="strip-details">
+                         <div class="strip-details-box">
+                           <h5 class="strip-detail-from"> <%=fooditem.from %></h5>
+                         </div>
+                         <div class="strip-details-box">
+                            <h5 class="strip-detail-quantity"> <%=fooditem.quantity %></h5>
+                          </div>
+                          <div class="strip-details-box">
+                            <h5 class="strip-detail-price"> <%=fooditem.price %></h5>
+                          </div>
+                     </div>
+                     <div class="strip-title-end">
+                        <h2 class="details1">Details</h2>
+                     </div>
+                </div>
+         <%   })       %>
+        </div>
+    </div>
+</body>
+</html>
